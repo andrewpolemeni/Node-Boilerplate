@@ -20,18 +20,18 @@ app.use(bodyParser.json());
 // DB Config to get keys for heroku
 const db = require("./config/keys").mongoURI;
 
-// Connect to MongoDB
-mongoose.connect(
-  "mongodb://User:Password@ds111111.mlab.com:11111/database",
-  { useNewUrlParser: true }
-);
-mongoose.connection
-  .once("open", function() {
-    console.log("MongoDB connection has been made! \n");
-  })
-  .on("error", function(error) {
-    console.log("Error is: ", error);
-  });
+// // Connect to MongoDB
+// mongoose.connect(
+//   "mongodb://User:Password@ds111111.mlab.com:11111/database",
+//   { useNewUrlParser: true }
+// );
+// mongoose.connection
+//   .once("open", function() {
+//     console.log("MongoDB connection has been made! \n");
+//   })
+//   .on("error", function(error) {
+//     console.log("Error is: ", error);
+//   });
 
 // return a hello world on the home page.
 // app.get('/', (req, res) => res.render('hello world'));
